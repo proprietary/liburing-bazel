@@ -1,0 +1,5 @@
+module(
+    name = "liburing",
+    version = "2.4",
+    compatibility_level = 2,
+)

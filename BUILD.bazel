@@ -1,0 +1,47 @@
+cc_library(
+    name = "liburing_headers",
+    srcs = [
+        "src/arch/syscall-defs.h",
+    ],
+    hdrs = [
+        "src/include/liburing.h",
+        "src/include/liburing/io_uring.h",
+        "src/include/liburing/barrier.h",
+        "src/include/liburing/compat.h",
+        "src/include/liburing/io_uring_version.h",
+    ],
+)
+
+cc_library(
+    name = "liburing_version",
+    srcs = ["src/version.c"],
+    includes = ["src/liburing/include"],
+    deps = [":liburing_headers"],
+)
+
+cc_library(
+    name = "liburing",
+    srcs = [
+        "src/arch/syscall-defs.h",
+        "src/arch/x86/syscall.h",
+        "src/arch/x86/lib.h",
+        "src/syscall.h",
+        "src/syscall.c",
+        "src/int_flags.h",
+        "src/lib.h",
+        "src/config-host.h",
+        "src/setup.c",
+        "src/register.c",
+        "src/queue.c",
+      ],
+    hdrs = [
+        "src/include/liburing.h",
+        "src/include/liburing/io_uring.h",
+        "src/include/liburing/barrier.h",
+        "src/include/liburing/compat.h",
+        "src/include/liburing/io_uring_version.h",
+    ],
+    deps = [":liburing_version"],
+    visibility = ["//visibility:public"],
+)
+

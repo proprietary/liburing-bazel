@@ -3,10 +3,10 @@
 
 #include "lib.h"
 #include "syscall.h"
-#include "liburing.h"
+#include "src/include/liburing.h"
 #include "int_flags.h"
-#include "liburing/compat.h"
-#include "liburing/io_uring.h"
+#include "src/include/liburing/compat.h"
+#include "src/include/liburing/io_uring.h"
 
 #define KERN_MAX_ENTRIES	32768
 #define KERN_MAX_CQ_ENTRIES	(2 * KERN_MAX_ENTRIES)

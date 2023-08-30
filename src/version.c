@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 
-#include "liburing.h"
-#include "liburing/io_uring_version.h"
+#include "src/include/liburing.h"
+#include "src/include/liburing/io_uring_version.h"
 
 int io_uring_major_version(void)
 {

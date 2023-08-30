@@ -3,10 +3,10 @@
 
 #include "lib.h"
 #include "syscall.h"
-#include "liburing.h"
+#include "src/include/liburing.h"
 #include "int_flags.h"
-#include "liburing/compat.h"
-#include "liburing/io_uring.h"
+#include "src/include/liburing/compat.h"
+#include "src/include/liburing/io_uring.h"
 
 /*
  * Returns true if we're not using SQ thread (thus nobody submits but us)

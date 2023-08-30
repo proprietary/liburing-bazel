@@ -10,6 +10,10 @@
 #define _GNU_SOURCE /* Required for musl to expose cpu_set_t */
 #endif
 
+# define AT_FDCWD		-100	/* Special value used to indicate
+					   the *at functions should use the
+					   current working directory. */
+
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/uio.h>

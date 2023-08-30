@@ -10,7 +10,7 @@
 #include <sys/mman.h>
 #include <sys/syscall.h>
 #include <sys/resource.h>
-#include <liburing.h>
+#include "src/include/liburing.h"
 
 /*
  * Don't put this below the #include "arch/$arch/syscall.h", that
